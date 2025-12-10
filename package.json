@@ -1,0 +1,52 @@
+{
+  "name": "@concat7sky/common",
+  "version": "0.0.3",
+  "description": "The common repository for sharing middleware, utils, types, and interfaces across the microservices.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "ISC",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.ts",
+      "default": "./dist/index.js"
+    },
+    "./date-extensions": "./src/date.extensions.ts",
+    "./string-extensions": "./src/string.extensions.ts",
+    "./get-status-description": "./src/getStatusDescription.ts",
+    "./notification-template": "./src/notificationTemplate.ts"
+  },
+  "keywords": [],
+  "author": "ConCat7 Sky Limited, <ikramhasib007@gmail.com> (https://github.com/ikramhasib007)",
+  "scripts": {
+    "dev": "tsc -w",
+    "clean": "del-cli ./dist/*",
+    "build": "pnpm run clean && tsc",
+    "lint": "eslint --max-warnings 0",
+    "pub:later": "git add . && git commit -m \"Updates\" && git push origin main && npm version patch && npm run build && npm publish",
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "graphql": "^16.12.0",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.10.2",
+    "del-cli": "^7.0.0",
+    "eslint": "^9.39.1",
+    "typescript": "~5.9.3"
+  },
+  "overrides": {
+    "eslint": "^9.39.1"
+  },
+  "volta": {
+    "node": "24.11.1",
+    "pnpm": "10.25.0"
+  }
+}
