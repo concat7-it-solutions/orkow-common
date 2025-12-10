@@ -1,6 +1,6 @@
 {
   "name": "@orkow/common",
-  "version": "0.0.14",
+  "version": "0.0.13",
   "description": "Common utils.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -8,6 +8,15 @@
   "files": [
     "dist/**/*"
   ],
+  "exports": {
+    "./date-extensions": {
+      "types": "./src/date.extensions.d.ts",
+      "default": "./src/date.extensions.ts"
+    },
+    "./string-extensions": "./src/string.extensions.d.ts",
+    "./get-status-description": "./src/getStatusDescription.ts",
+    "./notification-template": "./src/notificationTemplate.ts"
+  },
   "keywords": [],
   "author": "ConCat7 Sky Limited, <ikramhasib007@gmail.com> (https://github.com/ikramhasib007)",
   "scripts": {
