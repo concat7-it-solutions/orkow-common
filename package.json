@@ -13,10 +13,7 @@
       "types": "./dist/index.ts",
       "default": "./dist/index.js"
     },
-    "./date-extensions": {
-      "types": "./src/date.extensions.ts",
-      "default": "./src/date.extensions.js"
-    },
+    "./date-extensions": "./src/date.extensions.ts",
     "./string-extensions": "./src/string.extensions.ts",
     "./get-status-description": "./src/getStatusDescription.ts",
     "./notification-template": "./src/notificationTemplate.ts"
