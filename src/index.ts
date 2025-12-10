@@ -5,5 +5,5 @@ export * from './utils/getUserType'
 export * from './utils/hashPassword'
 
 export const log = (str: any) => {
-  console.log('logger: ' + str)
+  console.log('O logger: ' + str)
 }

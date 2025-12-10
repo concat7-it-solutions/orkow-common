@@ -25,8 +25,7 @@
     "clean": "del-cli ./dist/*",
     "build": "pnpm run clean && tsc",
     "lint": "eslint --max-warnings 0",
-    "pub:later": "git add . && git commit -m \"Updates\" && git push origin main && npm version patch && npm run build && npm publish",
-    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
+    "pub": "git add . && git commit -m \"Updates\" && git push origin main && npm version patch && npm run build && npm publish"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
