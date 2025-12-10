@@ -1,7 +1,7 @@
 {
-  "name": "@concat7sky/common",
-  "version": "0.0.3",
-  "description": "The common repository for sharing middleware, utils, types, and interfaces across the microservices.",
+  "name": "@orkow/common",
+  "version": "0.0.1",
+  "description": "Common utils.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "license": "ISC",
