@@ -13,7 +13,10 @@
       "types": "./src/date.extensions.d.ts",
       "default": "./src/date.extensions.ts"
     },
-    "./string-extensions": "./src/string.extensions.d.ts",
+    "./string-extensions": {
+      "types": "./src/string.extensions.d.ts",
+      "default": "./src/string.extensions.ts"
+    },
     "./get-status-description": "./src/getStatusDescription.ts",
     "./notification-template": "./src/notificationTemplate.ts"
   },
