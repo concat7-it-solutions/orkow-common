@@ -8,16 +8,6 @@
   "files": [
     "dist/**/*"
   ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.ts",
-      "default": "./dist/index.js"
-    },
-    "./date-extensions": "./src/date.extensions.ts",
-    "./string-extensions": "./src/string.extensions.ts",
-    "./get-status-description": "./src/getStatusDescription.ts",
-    "./notification-template": "./src/notificationTemplate.ts"
-  },
   "keywords": [],
   "author": "ConCat7 Sky Limited, <ikramhasib007@gmail.com> (https://github.com/ikramhasib007)",
   "scripts": {
