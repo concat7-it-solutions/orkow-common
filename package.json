@@ -9,11 +9,11 @@
     "dist/**"
   ],
   "keywords": [],
-  "author": "ConCat7 Sky Limited <ikramhasib007@gmail.com> (https://github.com/ikramhasib007)",
+  "author": "ConCat7 Sky Limited, <ikramhasib007@gmail.com> (https://github.com/ikramhasib007)",
   "scripts": {
     "dev": "tsc -w",
     "clean": "del-cli ./dist/*",
-    "build": "pnpm run clean && tsc",
+    "build": "pnpm run clean && tsc -p tsconfig.build.json",
     "lint": "eslint --max-warnings 0",
     "pub": "git add . && git commit -m \"Updates\" && git push origin main && npm version patch && npm run build && npm publish"
   },
