@@ -1,4 +1,5 @@
-import { JetStreamClient } from '@nats-io/jetstream'
+import { NatsConnection } from '@nats-io/transport-node'
+import { jetstream } from '@nats-io/jetstream'
 import { Subjects } from './subjects'
 
 interface Event {
@@ -8,13 +9,14 @@ interface Event {
 
 export abstract class Publisher<T extends Event> {
   abstract subject: T['subject']
-  private client: JetStreamClient
+  private client: NatsConnection
 
-  constructor(client: JetStreamClient) {
+  constructor(client: NatsConnection) {
     this.client = client
   }
 
   publish(data: T['data']) {
-    return this.client.publish(this.subject, JSON.stringify(data))
+    const js = jetstream(this.client)
+    return js.publish(this.subject, JSON.stringify(data))
   }
 }
