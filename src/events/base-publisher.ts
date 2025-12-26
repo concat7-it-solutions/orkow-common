@@ -16,6 +16,8 @@ export abstract class Publisher<T extends Event> {
   }
 
   publish(data: T['data']) {
+    console.log('Publish to subjects: ' + this.subject, data)
+
     const js = jetstream(this.client)
     return js.publish(this.subject, JSON.stringify(data))
   }

@@ -38,6 +38,7 @@ export abstract class Listener<T extends Event> {
     // Simply specifying the name of the stream
     const js = jetstream(this.client)
     const c2 = await js.consumers.get(this.str_name, this.queueGroupName)
+    console.log('c2: ', c2)
 
     const iter = await c2.fetch({ max_messages: 3 })
     for await (const m of iter) {
