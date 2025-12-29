@@ -4,6 +4,7 @@ export * from './utils/getUserId'
 export * from './utils/getUserType'
 export * from './utils/hashPassword'
 
+export * from './nats-wrapper'
 export * from './events/base-listener'
 export * from './events/base-publisher'
 export * from './events/subjects'
