@@ -8,6 +8,7 @@ export * from './nats-wrapper'
 export * from './events/base-listener'
 export * from './events/base-publisher'
 export * from './events/subjects'
+export * from './events/streams'
 export * from './events/user-created-event'
 
 export const log = (str: any) => {
