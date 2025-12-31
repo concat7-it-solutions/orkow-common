@@ -1,4 +1,4 @@
-import { NatsConnection, AckPolicy, JsMsg } from 'nats'
+import { NatsConnection, AckPolicy, JsMsg, nanos } from 'nats'
 import { Subjects } from './subjects'
 import { Streams } from './streams'
 import { log } from '..'
@@ -14,7 +14,7 @@ export abstract class Listener<T extends Event> {
   abstract streamName: T['streamName']
   abstract queueGroupName: string
   abstract onMessage(data: T['data'], msg: JsMsg): void
-  protected ackWait = 5 * 1000 * 1000
+  protected ackWait = 5 * 1000
 
   constructor(private client: NatsConnection) {}
 
@@ -27,7 +27,7 @@ export abstract class Listener<T extends Event> {
     await jsm.consumers.add(this.streamName, {
       ack_policy: AckPolicy.Explicit,
       durable_name: this.queueGroupName,
-      ack_wait: this.ackWait,
+      ack_wait: nanos(this.ackWait),
     })
     log(`Durable consumer add to ${this.streamName} stream`)
 
