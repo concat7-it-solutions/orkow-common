@@ -1,6 +1,7 @@
 import { NatsConnection, AckPolicy, JsMsg } from 'nats'
 import { Subjects } from './subjects'
 import { Streams } from './streams'
+import { log } from '..'
 
 interface Event {
   subject: Subjects
@@ -28,14 +29,14 @@ export abstract class Listener<T extends Event> {
       durable_name: this.queueGroupName,
       ack_wait: this.ackWait,
     })
-    console.log(`Durable consumer add to ${this.streamName} stream`)
+    log(`Durable consumer add to ${this.streamName} stream`)
 
     // Simply specifying the name of the stream
     const c2 = await js.consumers.get(this.streamName, this.queueGroupName)
 
     const iter = await c2.consume()
     for await (const m of iter) {
-      console.log(`Message received: ${m.subject} / ${this.queueGroupName}`)
+      log(`Message received: ${m.subject} / ${this.queueGroupName}`)
 
       const parsedData = this.parseMessage(m)
       this.onMessage(parsedData, m)

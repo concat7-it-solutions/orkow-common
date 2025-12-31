@@ -1,5 +1,6 @@
 import { NatsConnection } from 'nats'
 import { Subjects } from './subjects'
+import { log } from '..'
 
 interface Event {
   subjectRoot: Subjects
@@ -14,7 +15,7 @@ export abstract class Publisher<T extends Event> {
   constructor(private client: NatsConnection) {}
 
   publish(data: T['data']) {
-    console.log(`Event published to subject: ${this.subject}`, data)
+    log(`Event published to subject: ${this.subject}`)
 
     // Access the JetStream client
     const js = this.client.jetstream()
