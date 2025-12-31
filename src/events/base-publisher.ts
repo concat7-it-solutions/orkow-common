@@ -15,7 +15,7 @@ export abstract class Publisher<T extends Event> {
   constructor(private client: NatsConnection) {}
 
   publish(data: T['data']) {
-    log(`Event published to subject: ${this.subject}`)
+    log(`Event published to subject: ${this.subjectRoot}.${this.subject}`)
 
     // Access the JetStream client
     const js = this.client.jetstream()
