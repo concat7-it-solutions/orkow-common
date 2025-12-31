@@ -1,52 +1,44 @@
-import { NatsConnection } from '@nats-io/transport-node'
-import {
-  AckPolicy,
-  jetstream,
-  jetstreamManager,
-  JsMsg,
-} from '@nats-io/jetstream'
+import { NatsConnection, AckPolicy, JsMsg } from 'nats'
 import { Subjects } from './subjects'
+import { Streams } from './streams'
 
 interface Event {
   subject: Subjects
+  streamName: Streams
   data: any
 }
 
 export abstract class Listener<T extends Event> {
   abstract subject: T['subject']
+  abstract streamName: T['streamName']
   abstract queueGroupName: string
   abstract onMessage(data: T['data'], msg: JsMsg): void
-  private client: NatsConnection
-  private str_name: string
   protected ackWait = 5 * 1000
 
-  constructor(client: NatsConnection, str_name: string) {
-    this.client = client
-    this.str_name = str_name
-  }
+  constructor(private client: NatsConnection) {}
 
   async listen() {
-    const jsm = await jetstreamManager(this.client)
+    // Access the JetStream client
+    const js = this.client.jetstream()
+    const jsm = await js.jetstreamManager()
 
     // create durable consumer
-    await jsm.consumers.add(this.str_name, {
+    await jsm.consumers.add(this.streamName, {
       ack_policy: AckPolicy.Explicit,
       durable_name: this.queueGroupName,
       ack_wait: this.ackWait,
     })
+    console.log(`Durable consumer add to ${this.streamName} stream`)
 
     // Simply specifying the name of the stream
-    const js = jetstream(this.client)
-    const c2 = await js.consumers.get(this.str_name, this.queueGroupName)
-    console.log('c2: ', c2)
+    const c2 = await js.consumers.get(this.streamName, this.queueGroupName)
 
-    const iter = await c2.fetch({ max_messages: 3 })
+    const iter = await c2.consume()
     for await (const m of iter) {
       console.log(`Message received: ${m.subject} / ${this.queueGroupName}`)
 
       const parsedData = this.parseMessage(m)
       this.onMessage(parsedData, m)
-      m.ack()
     }
   }
 

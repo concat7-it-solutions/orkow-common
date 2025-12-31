@@ -15,11 +15,10 @@
     "clean": "del-cli ./dist/*",
     "build": "pnpm run clean && tsc -p tsconfig.build.json",
     "lint": "eslint --max-warnings 0",
-    "pub": "git add . && git commit -m \"Updates\" && git push origin main && npm version patch && npm run build && npm publish"
+    "lint:fix": "eslint --fix",
+    "pub": "pnpm run lint:fix && git add . && git commit -m \"Updates\" && git push origin main && npm version patch && npm run build && npm publish"
   },
   "dependencies": {
-    "@nats-io/jetstream": "^3.2.0",
-    "@nats-io/transport-node": "^3.2.0",
     "bcryptjs": "^3.0.3",
     "graphql": "^16.12.0",
     "jsonwebtoken": "^9.0.3",

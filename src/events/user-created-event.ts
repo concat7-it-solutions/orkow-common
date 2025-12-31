@@ -1,9 +1,9 @@
+import { Streams } from './streams'
 import { Subjects } from './subjects'
 
-export interface UserCreatedEvent {
+export interface UserCreatedEvent<T> {
+  subjectRoot: Subjects.UsersSrv
   subject: Subjects.UserCreated
-  data: {
-    id: string
-    firstName: string
-  }
+  streamName: Streams.UsersStream
+  data: T
 }

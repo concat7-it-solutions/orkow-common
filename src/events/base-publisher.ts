@@ -1,24 +1,27 @@
-import { NatsConnection } from '@nats-io/transport-node'
-import { jetstream } from '@nats-io/jetstream'
+import { NatsConnection } from 'nats'
 import { Subjects } from './subjects'
 
 interface Event {
+  subjectRoot: Subjects
   subject: Subjects
   data: any
 }
 
 export abstract class Publisher<T extends Event> {
+  abstract subjectRoot: T['subjectRoot']
   abstract subject: T['subject']
-  private client: NatsConnection
 
-  constructor(client: NatsConnection) {
-    this.client = client
-  }
+  constructor(private client: NatsConnection) {}
 
   publish(data: T['data']) {
-    console.log('Publish to subjects: ' + this.subject, data)
+    console.log(`Event published to subject: ${this.subject}`, data)
 
-    const js = jetstream(this.client)
-    return js.publish(this.subject, JSON.stringify(data))
+    // Access the JetStream client
+    const js = this.client.jetstream()
+
+    return js.publish(
+      `${this.subjectRoot}.${this.subject}`,
+      JSON.stringify(data)
+    )
   }
 }
