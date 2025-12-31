@@ -45,6 +45,7 @@ export default [
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/ban-types': 'off',
+      'no-empty': 'off',
       'no-undef': 'off',
     },
   },

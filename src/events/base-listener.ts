@@ -13,7 +13,7 @@ export abstract class Listener<T extends Event> {
   abstract streamName: T['streamName']
   abstract queueGroupName: string
   abstract onMessage(data: T['data'], msg: JsMsg): void
-  protected ackWait = 5 * 1000
+  protected ackWait = 5 * 1000 * 1000
 
   constructor(private client: NatsConnection) {}
 
