@@ -32,9 +32,9 @@ export abstract class Listener<T extends Event> {
     log(`Durable consumer add to ${this.streamName} stream`)
 
     // Simply specifying the name of the stream
-    const c2 = await js.consumers.get(this.streamName, this.queueGroupName)
+    const c = await js.consumers.get(this.streamName, this.queueGroupName)
 
-    const iter = await c2.consume()
+    const iter = await c.consume()
     for await (const m of iter) {
       log(`Message received: ${m.subject} / ${this.queueGroupName}`)
 
