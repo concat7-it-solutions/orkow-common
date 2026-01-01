@@ -4,12 +4,14 @@ import { Streams } from './streams'
 import { log } from '..'
 
 interface Event {
+  subjectRoot: Subjects
   subject: Subjects
   streamName: Streams
   data: any
 }
 
 export abstract class Listener<T extends Event> {
+  abstract subjectRoot: T['subjectRoot']
   abstract subject: T['subject']
   abstract streamName: T['streamName']
   abstract queueGroupName: string
@@ -19,6 +21,8 @@ export abstract class Listener<T extends Event> {
   constructor(private client: NatsConnection) {}
 
   async listen() {
+    await this.streamLivenessCheck()
+
     // Access the JetStream client
     const js = this.client.jetstream()
     const jsm = await js.jetstreamManager()
@@ -40,6 +44,25 @@ export abstract class Listener<T extends Event> {
 
       const parsedData = this.parseMessage(m)
       this.onMessage(parsedData, m)
+    }
+  }
+
+  private async streamLivenessCheck() {
+    const js = this.client.jetstream()
+    try {
+      await js.streams.get(this.streamName)
+    } catch (error) {
+      const jsm = await js.jetstreamManager()
+
+      const subj = this.subjectRoot
+      const name = this.streamName
+
+      // create the stream
+      await jsm.streams.add({
+        name: name,
+        subjects: [`${subj}.>`],
+      })
+      log(`stream ${name} added`)
     }
   }
 
