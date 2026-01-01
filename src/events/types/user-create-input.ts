@@ -2,10 +2,10 @@ import { UserType } from './user-type'
 
 export type CreateUserInput = {
   authProvider: string
-  authProviderId?: string | null
+  authProviderId?: string
   email: string
   firstName: string
   lastName: string
-  password?: string | null
+  password?: string
   type: UserType
 }
