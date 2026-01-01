@@ -6,5 +6,5 @@ export interface UserCreatedEvent {
   subjectRoot: Subjects.UsersSrv
   subject: Subjects.UserCreated
   streamName: Streams.UsersStream
-  data: CreateUserInput
+  data: CreateUserInput & { id: string }
 }
