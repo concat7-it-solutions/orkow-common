@@ -1,9 +1,10 @@
 import { Streams } from './streams'
 import { Subjects } from './subjects'
+import { CreateUserInput } from './types/user-create-input'
 
-export interface UserCreatedEvent<T> {
+export interface UserCreatedEvent {
   subjectRoot: Subjects.UsersSrv
   subject: Subjects.UserCreated
   streamName: Streams.UsersStream
-  data: T
+  data: CreateUserInput
 }
