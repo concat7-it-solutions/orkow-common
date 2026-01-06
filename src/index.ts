@@ -10,10 +10,10 @@ export * from './events/base-publisher'
 export * from './events/subjects'
 export * from './events/streams'
 
+// Events
 export * from './events/user-created-event'
-
-export * from './events/types/user-type'
-export * from './events/types/user-create-input'
+export * from './events/user-updated-event'
+export * from './events/user-deleted-event'
 
 export const log = (str: any) => {
   console.log('logger: ' + str)
