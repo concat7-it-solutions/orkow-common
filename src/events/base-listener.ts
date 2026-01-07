@@ -33,7 +33,9 @@ export abstract class Listener<T extends Event> {
       durable_name: this.queueGroupName,
       ack_wait: nanos(this.ackWait),
     })
-    log(`Durable consumer add to ${this.streamName} stream`)
+    log(
+      `Listening to subject: ${this.subjectRoot}.${this.subject} / ${this.queueGroupName}`
+    )
 
     // Simply specifying the name of the stream
     const c = await js.consumers.get(this.streamName, this.queueGroupName)
