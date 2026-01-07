@@ -45,7 +45,6 @@ export abstract class Publisher<T extends Event> {
         name: name,
         subjects: [`${subj}.>`],
       })
-      log(`stream ${name} added`)
     }
   }
 }

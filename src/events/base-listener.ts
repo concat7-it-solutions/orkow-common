@@ -64,7 +64,6 @@ export abstract class Listener<T extends Event> {
         name: name,
         subjects: [`${subj}.>`],
       })
-      log(`stream ${name} added`)
     }
   }
 
