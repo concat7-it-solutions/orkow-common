@@ -15,7 +15,7 @@ export abstract class Publisher<T extends Event> {
   abstract subject: T['subject']
   abstract streamName: T['streamName']
 
-  constructor(private client: NatsConnection) {}
+  constructor(protected client: NatsConnection) {}
 
   async publish(data: T['data']) {
     await this.streamLivenessCheck()

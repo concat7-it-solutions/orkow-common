@@ -18,7 +18,7 @@ export abstract class Listener<T extends Event> {
   abstract onMessage(data: T['data'], msg: JsMsg): void
   protected ackWait = 5 * 1000
 
-  constructor(private client: NatsConnection) {}
+  constructor(protected client: NatsConnection) {}
 
   async listen() {
     await this.streamLivenessCheck()
