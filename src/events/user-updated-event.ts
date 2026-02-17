@@ -6,5 +6,5 @@ export interface UserUpdatedEvent {
   subjectRoot: Subjects.UsersSrv
   subject: Subjects.UserUpdated
   streamName: Streams.UsersStream
-  data: UpdateUserInput & { id: string }
+  data: UpdateUserInput & { id: string; version: number }
 }

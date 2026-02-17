@@ -5,5 +5,5 @@ export interface UserDeletedEvent {
   subjectRoot: Subjects.UsersSrv
   subject: Subjects.UserDeleted
   streamName: Streams.UsersStream
-  data: { id: string }
+  data: { id: string; version: number }
 }
