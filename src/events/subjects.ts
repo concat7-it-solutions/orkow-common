@@ -13,4 +13,10 @@ export enum Subjects {
 
   // Auth
   AuthSrv = 'auth',
+
+  // Payment
+  PaymentsSrv = 'payments',
+  PaymentCreated = 'payment.created',
+  PaymentUpdated = 'payment.updated',
+  PaymentDeleted = 'payment.deleted',
 }
