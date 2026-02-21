@@ -17,3 +17,7 @@ export * from './events/user-deleted-event'
 export const log = (str: any) => {
   console.log('logger: ' + str)
 }
+
+export const print = (obj: any) => {
+  return JSON.stringify(obj, null, 2)
+}
