@@ -19,5 +19,5 @@ export const log = (str: any) => {
 }
 
 export const print = (obj: any) => {
-  return JSON.stringify(obj, null, 2)
+  return JSON.stringify(obj)
 }
