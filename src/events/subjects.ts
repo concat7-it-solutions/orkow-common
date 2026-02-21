@@ -14,6 +14,12 @@ export enum Subjects {
   // Auth
   AuthSrv = 'auth',
 
+  // Expiration
+  ExpirationsSrv = 'expirations',
+  ExpirationCreated = 'expiration.created',
+  ExpirationUpdated = 'expiration.updated',
+  ExpirationDeleted = 'expiration.deleted',
+
   // Payment
   PaymentsSrv = 'payments',
   PaymentCreated = 'payment.created',
