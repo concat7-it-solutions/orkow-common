@@ -4,6 +4,11 @@ export * from './utils/getUserId'
 export * from './utils/getUserType'
 export * from './utils/hashPassword'
 
+export * from './errors/custom-error'
+export * from './errors/bad-request-error'
+export * from './errors/not-authorized-error'
+export * from './errors/not-found-error'
+
 export * from './events/base-listener'
 export * from './events/base-publisher'
 export * from './events/subjects'
