@@ -42,10 +42,12 @@ export abstract class Listener<T extends Event> {
 
     const iter = await c.consume()
     for await (const m of iter) {
-      log(`Message received: ${m.subject} / ${this.queueGroupName}`)
+      if (`${m.subject}` === `${this.subjectRoot}.${this.subject}`) {
+        log(`Message received: ${m.subject} / ${this.queueGroupName}`)
 
-      const parsedData = this.parseMessage(m)
-      this.onMessage(parsedData, m)
+        const parsedData = this.parseMessage(m)
+        this.onMessage(parsedData, m)
+      }
     }
   }
 
