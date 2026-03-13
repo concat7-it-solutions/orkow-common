@@ -19,6 +19,10 @@ export * from './events/user-created-event'
 export * from './events/user-updated-event'
 export * from './events/user-deleted-event'
 
+export * from './events/consumer-created-event'
+export * from './events/consumer-updated-event'
+export * from './events/consumer-deleted-event'
+
 export const log = (str: any) => {
   console.log('logger: ' + str)
 }
