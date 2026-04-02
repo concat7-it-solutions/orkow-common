@@ -14,6 +14,12 @@ export enum Subjects {
   // Auth
   AuthSrv = 'auth',
 
+  // Enroll
+  EnrollsSrv = 'enrolls',
+  // EnrollCreated = 'enroll.created',
+  // EnrollUpdated = 'enroll.updated',
+  // EnrollDeleted = 'enroll.deleted',
+
   // Expiration
   ExpirationsSrv = 'expirations',
   ExpirationCreated = 'expiration.created',
