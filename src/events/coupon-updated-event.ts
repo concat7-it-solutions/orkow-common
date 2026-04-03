@@ -1,13 +1,23 @@
 import { Streams } from './streams'
 import { Subjects } from './subjects'
-import { CreateCouponInput } from './types/coupon-create-input'
+import { CouponType } from './types/coupon-type'
+import { DiscountType } from './types/discount-type'
 
-type CouponUpdatedEventData = {
+export type CouponUpdatedEventData = {
   id: string
   version: number
-} & CreateCouponInput
+  coupon: string
+  type: CouponType
+  discountType: DiscountType
+  discountValue: number
+  maxDiscountValue?: number
+}
 
-type CouponActionEventData = { id: string; version: number; isActive: boolean }
+export type CouponActionEventData = {
+  id: string
+  version: number
+  isActive: boolean
+}
 
 export interface CouponUpdatedEvent {
   subjectRoot: Subjects.CouponSrv
