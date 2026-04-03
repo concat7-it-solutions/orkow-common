@@ -14,14 +14,20 @@ export * from './events/base-publisher'
 export * from './events/subjects'
 export * from './events/streams'
 
-// Events
+// User Events
 export * from './events/user-created-event'
 export * from './events/user-updated-event'
 export * from './events/user-deleted-event'
 
+// Consumer Events
 export * from './events/consumer-created-event'
 export * from './events/consumer-updated-event'
 export * from './events/consumer-deleted-event'
+
+// Billing Events
+export * from './events/billing-created-event'
+export * from './events/billing-updated-event'
+export * from './events/billing-deleted-event'
 
 export const log = (str: any) => {
   console.log('logger: ' + str)
