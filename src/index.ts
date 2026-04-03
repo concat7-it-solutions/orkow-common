@@ -14,6 +14,10 @@ export * from './events/base-publisher'
 export * from './events/subjects'
 export * from './events/streams'
 
+// @types
+export * from './events/types/coupon-type'
+export * from './events/types/discount-type'
+
 // User Events
 export * from './events/user-created-event'
 export * from './events/user-updated-event'
