@@ -6,5 +6,5 @@ export interface BillingCreatedEvent {
   subjectRoot: Subjects.EnrollsSrv
   subject: Subjects.BillingCreated
   streamName: Streams.EnrollsStream
-  data: CreateBillingInput & { id: string; amount: number; currency?: string }
+  data: CreateBillingInput & { id: string; amount: number }
 }
