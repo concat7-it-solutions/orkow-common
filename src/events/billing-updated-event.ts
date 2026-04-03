@@ -8,8 +8,6 @@ export interface BillingUpdatedEvent {
   streamName: Streams.EnrollsStream
   data: UpdateBillingInput & {
     id: string
-    amount: number
-    currency: string
     version: number
   }
 }
