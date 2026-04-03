@@ -14,6 +14,12 @@ export enum Subjects {
   // Auth
   AuthSrv = 'auth',
 
+  // Coupon
+  CouponSrv = 'coupon',
+  CouponCreated = 'coupon.created',
+  CouponUpdated = 'coupon.updated',
+  CouponDeleted = 'coupon.deleted',
+
   // Enroll
   EnrollsSrv = 'enrolls',
   BillingCreated = 'billing.created',

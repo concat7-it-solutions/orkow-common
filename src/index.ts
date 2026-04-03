@@ -24,6 +24,11 @@ export * from './events/consumer-created-event'
 export * from './events/consumer-updated-event'
 export * from './events/consumer-deleted-event'
 
+// Coupon Events
+export * from './events/coupon-created-event'
+export * from './events/coupon-updated-event'
+export * from './events/coupon-deleted-event'
+
 // Billing Events
 export * from './events/billing-created-event'
 export * from './events/billing-updated-event'
