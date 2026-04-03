@@ -10,10 +10,10 @@ export interface CouponUpdatedEvent {
   data: {
     id: string
     version: number
-    coupon: string
-    type: CouponType
-    discountType: DiscountType
-    discountValue: number
+    coupon?: string
+    type?: CouponType
+    discountType?: DiscountType
+    discountValue?: number
     maxDiscountValue?: number
     isActive?: boolean
   }
