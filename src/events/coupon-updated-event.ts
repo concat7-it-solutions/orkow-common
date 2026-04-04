@@ -15,6 +15,7 @@ export interface CouponUpdatedEvent {
     discountType?: DiscountType
     discountValue?: number
     maxDiscountValue?: number
+    minCartValue?: number
     isActive?: boolean
   }
 }
