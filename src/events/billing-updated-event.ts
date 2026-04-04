@@ -9,5 +9,6 @@ export interface BillingUpdatedEvent {
   data: UpdateBillingInput & {
     id: string
     version: number
+    amount?: number
   }
 }
