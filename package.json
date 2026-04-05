@@ -9,7 +9,7 @@
     "dist/**"
   ],
   "keywords": [],
-  "author": "ConCat7 Sky Limited <ikramhasib007@gmail.com> (https://github.com/ikramhasib007)",
+  "author": "ConCat7 Sky Limited, <ikramhasib007@gmail.com> (https://github.com/ikramhasib007)",
   "scripts": {
     "dev": "tsc -w",
     "clean": "del-cli ./dist/*",
