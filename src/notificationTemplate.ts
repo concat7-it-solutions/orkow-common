@@ -1,4 +1,4 @@
-export type TemplateUserParams = { imageUrl: string; fullname: string }
+export type TemplateUserParams = { fullname: string; imageUrl?: string }
 
 export default function notificationTemplate(
   user: TemplateUserParams,
@@ -7,7 +7,7 @@ export default function notificationTemplate(
   const text = getText(type)
 
   return `<span class="flex-shrink-0 inline-block relative">
-      <img class="h-10 w-10 rounded-full" src=${user.imageUrl} alt="" />
+      <img class="h-10 w-10 rounded-full" src=${user.imageUrl ?? null} alt="" />
       <span class="absolute top-0 right-0 block h-2.5 w-2.5 rounded-full" aria-hidden="true"></span>
     </span>
     <div class="ml-4 truncate">
