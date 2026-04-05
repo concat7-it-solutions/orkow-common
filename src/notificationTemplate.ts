@@ -7,7 +7,7 @@ export default function notificationTemplate(
   const text = getText(type)
 
   return `<span class="flex-shrink-0 inline-block relative">
-      <img class="h-10 w-10 rounded-full" src=${user.imageUrl ?? null} alt="" />
+      <img class="h-10 w-10 rounded-full" src="${user.imageUrl ?? null}" alt="${user.fullname}" />
       <span class="absolute top-0 right-0 block h-2.5 w-2.5 rounded-full" aria-hidden="true"></span>
     </span>
     <div class="ml-4 truncate">
