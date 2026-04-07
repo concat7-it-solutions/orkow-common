@@ -15,7 +15,7 @@ export enum Subjects {
   AuthSrv = 'auth',
 
   // Coupon
-  CouponSrv = 'coupon',
+  CouponsSrv = 'coupons',
   CouponCreated = 'coupon.created',
   CouponUpdated = 'coupon.updated',
   CouponDeleted = 'coupon.deleted',
@@ -25,9 +25,18 @@ export enum Subjects {
   BillingCreated = 'billing.created',
   BillingUpdated = 'billing.updated',
   BillingDeleted = 'billing.deleted',
-  // EnrollCreated = 'enroll.created',
-  // EnrollUpdated = 'enroll.updated',
-  // EnrollDeleted = 'enroll.deleted',
+
+  // Shop
+  ShopsSrv = 'shops',
+  ShopCreated = 'shop.created',
+  ShopUpdated = 'shop.updated',
+  ShopDeleted = 'shop.deleted',
+
+  // Product
+  ProductsSrv = 'products',
+  ProductCreated = 'product.created',
+  ProductUpdated = 'product.updated',
+  ProductDeleted = 'product.deleted',
 
   // Expiration
   ExpirationsSrv = 'expirations',

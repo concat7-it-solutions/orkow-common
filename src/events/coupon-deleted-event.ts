@@ -3,8 +3,8 @@ import { Subjects } from './subjects'
 import { CouponType } from './types/coupon-type'
 
 export interface CouponDeletedEvent {
-  subjectRoot: Subjects.CouponSrv
+  subjectRoot: Subjects.CouponsSrv
   subject: Subjects.CouponDeleted
-  streamName: Streams.CouponStream
+  streamName: Streams.CouponsStream
   data: { id: string; version: number; type: CouponType }
 }

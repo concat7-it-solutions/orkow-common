@@ -4,9 +4,9 @@ import { CouponType } from './types/coupon-type'
 import { DiscountType } from './types/discount-type'
 
 export interface CouponUpdatedEvent {
-  subjectRoot: Subjects.CouponSrv
+  subjectRoot: Subjects.CouponsSrv
   subject: Subjects.CouponUpdated
-  streamName: Streams.CouponStream
+  streamName: Streams.CouponsStream
   data: {
     id: string
     version: number
