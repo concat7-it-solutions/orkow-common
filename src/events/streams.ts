@@ -9,5 +9,6 @@ export enum Streams {
   ShopsStream = `EVENTS_${Subjects.ShopsSrv}`,
   ProductsStream = `EVENTS_${Subjects.ProductsSrv}`,
   PaymentsStream = `EVENTS_${Subjects.PaymentsSrv}`,
+  NotificationsStream = `EVENTS_${Subjects.NotificationsSrv}`,
   ExpirationsStream = `EVENTS_${Subjects.ExpirationsSrv}`,
 }

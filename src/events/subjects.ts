@@ -49,4 +49,10 @@ export enum Subjects {
   PaymentCreated = 'payment.created',
   PaymentUpdated = 'payment.updated',
   PaymentDeleted = 'payment.deleted',
+
+  // Notification
+  NotificationsSrv = 'notifications',
+  NotificationCreated = 'notification.created',
+  // NotificationUpdated = 'notification.updated',
+  // NotificationDeleted = 'notification.deleted',
 }
