@@ -11,6 +11,6 @@ export interface PackageUpdatedEvent {
     backupCharge?: number
     price: number
     vat: number
-    isActive?: boolean
+    isActive: boolean
   }
 }
