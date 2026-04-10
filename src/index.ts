@@ -33,6 +33,11 @@ export * from './events/coupon-created-event'
 export * from './events/coupon-updated-event'
 export * from './events/coupon-deleted-event'
 
+// Enroll Events
+export * from './events/enroll-created-event'
+export * from './events/enroll-updated-event'
+export * from './events/enroll-deleted-event'
+
 // Billing Events
 export * from './events/billing-created-event'
 export * from './events/billing-updated-event'
