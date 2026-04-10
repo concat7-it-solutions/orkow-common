@@ -34,7 +34,7 @@ export abstract class Listener<T extends Event> {
       ack_wait: nanos(this.ackWait),
     })
     log(
-      `Consuming to subject: ${this.subjectRoot}.${this.subject} / ${this.queueGroupName}`
+      `Consuming subject: ${this.subjectRoot}.${this.subject} / ${this.queueGroupName}`
     )
 
     // Simply specifying the name of the stream
