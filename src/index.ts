@@ -34,6 +34,9 @@ export * from './events/coupon-updated-event'
 export * from './events/coupon-deleted-event'
 
 // Enroll Events
+export * from './events/package-created-event'
+export * from './events/package-updated-event'
+export * from './events/package-deleted-event'
 export * from './events/enroll-created-event'
 export * from './events/enroll-updated-event'
 export * from './events/enroll-deleted-event'

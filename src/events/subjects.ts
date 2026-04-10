@@ -22,6 +22,9 @@ export enum Subjects {
 
   // Enroll
   EnrollsSrv = 'enrolls',
+  PackageCreated = 'package.created',
+  PackageUpdated = 'package.updated',
+  PackageDeleted = 'package.deleted',
   EnrollCreated = 'enroll.created',
   EnrollUpdated = 'enroll.updated',
   EnrollDeleted = 'enroll.deleted',
