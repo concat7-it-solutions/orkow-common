@@ -16,7 +16,8 @@
     "build": "pnpm run clean && tsc -p tsconfig.build.json",
     "lint": "eslint --max-warnings 0",
     "lint:fix": "eslint --fix",
-    "pub": "pnpm run lint:fix && git add . && git commit -m \"Updates\" && git push origin main && npm version patch && npm run build && npm publish"
+    "pub": "pnpm run lint:fix && git add . && git commit -m \"Updates\" && git push origin main && npm version patch && npm run build && npm publish",
+    "pub:minor": "pnpm run lint:fix && git add . && git commit -m \"Updates\" && git push origin main && npm version minor && npm run build && npm publish"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

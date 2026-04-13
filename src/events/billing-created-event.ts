@@ -11,6 +11,7 @@ export interface BillingCreatedEvent {
     currency?: string
     billingAddressId?: string
     packageId?: string
+    enrollId?: string
     uid?: string
   }
 }
