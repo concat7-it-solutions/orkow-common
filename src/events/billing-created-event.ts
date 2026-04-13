@@ -8,7 +8,7 @@ export interface BillingCreatedEvent {
   data: {
     id: string
     amount: number
-    currency: string
+    currency?: string
     billingAddressId?: string
     uid?: string
   }
