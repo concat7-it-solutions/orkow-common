@@ -12,6 +12,7 @@ export interface BillingCreatedEvent {
     billingAddressId?: string
     packageId?: string
     enrollId?: string
+    shopId?: string
     uid?: string
   }
 }
