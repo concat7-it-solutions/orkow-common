@@ -46,6 +46,11 @@ export * from './events/billing-created-event'
 export * from './events/billing-updated-event'
 export * from './events/billing-deleted-event'
 
+// Shop Events
+export * from './events/shop-created-event'
+export * from './events/shop-updated-event'
+export * from './events/shop-deleted-event'
+
 // Notification Events
 export * from './events/notification-created-event'
 
