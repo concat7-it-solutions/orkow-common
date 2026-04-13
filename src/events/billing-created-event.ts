@@ -10,6 +10,7 @@ export interface BillingCreatedEvent {
     amount: number
     currency?: string
     billingAddressId?: string
+    packageId?: string
     uid?: string
   }
 }
