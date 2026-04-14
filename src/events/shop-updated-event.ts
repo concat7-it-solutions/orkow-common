@@ -7,12 +7,14 @@ export interface ShopUpdatedEvent {
   streamName: Streams.ShopsStream
   data: {
     id: string
-    name: string
-    currency: string
-    ownerId: string
+    version: number
+    name?: string
+    currency?: string
+    ownerId?: string
+    domain?: string
+    subdomain?: string
     isActive?: boolean
     status?: string
     verified?: boolean
-    version: number
   }
 }

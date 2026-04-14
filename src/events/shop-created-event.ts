@@ -10,5 +10,7 @@ export interface ShopCreatedEvent {
     name: string
     currency: string
     ownerId: string
+    domain?: string
+    subdomain?: string
   }
 }
