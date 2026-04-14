@@ -12,6 +12,7 @@ export interface ShopUpdatedEvent {
     ownerId: string
     isActive?: boolean
     status?: string
+    verified?: boolean
     version: number
   }
 }

@@ -39,9 +39,9 @@ function getText(type: string): string {
     case 'verified':
       return 'your shop is ready for selling goods.'
     case 'active':
-      return 'your shop has been activated.'
+      return 'shop has been activated.'
     case 'inactive':
-      return 'your shop has been deactivated.'
+      return 'shop has been deactivated.'
     case 'newEnroll':
       return 'has enrolled.'
     case 'updateEnroll':
