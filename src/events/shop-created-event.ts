@@ -12,5 +12,6 @@ export interface ShopCreatedEvent {
     ownerId: string
     domain?: string
     subdomain?: string
+    status?: string
   }
 }

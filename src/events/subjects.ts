@@ -44,6 +44,12 @@ export enum Subjects {
   ProductUpdated = 'product.updated',
   ProductDeleted = 'product.deleted',
 
+  // Shopping Cart
+  CartsSrv = 'carts',
+  CartCreated = 'cart.created',
+  CartUpdated = 'cart.updated',
+  CartDeleted = 'cart.deleted',
+
   // Expiration
   ExpirationsSrv = 'expirations',
   ExpirationCreated = 'expiration.created',

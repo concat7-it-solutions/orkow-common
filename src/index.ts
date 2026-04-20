@@ -51,6 +51,11 @@ export * from './events/shop-created-event'
 export * from './events/shop-updated-event'
 export * from './events/shop-deleted-event'
 
+// Product Events
+export * from './events/product-created-event'
+export * from './events/product-updated-event'
+export * from './events/product-deleted-event'
+
 // Notification Events
 export * from './events/notification-created-event'
 
