@@ -18,6 +18,8 @@ export interface ProductCreatedEvent {
     discountType?: string
     discountValue?: number
     maxDiscountValue?: number
+    emiAvailable?: boolean
+    leadTime?: string
     variants?: {
       uid: string
       name: string
@@ -30,6 +32,7 @@ export interface ProductCreatedEvent {
       discountType?: string
       discountValue?: number
       maxDiscountValue?: number
+      leadTime?: string
     }[]
   }
 }

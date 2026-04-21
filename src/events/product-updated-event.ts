@@ -8,8 +8,8 @@ export interface ProductUpdatedEvent {
   data: {
     id: string
     version: number
-    name: string
-    sku: string
+    name?: string
+    sku?: string
     storePrice?: number
     price?: number
     vat?: number
@@ -19,6 +19,10 @@ export interface ProductUpdatedEvent {
     discountType?: string
     discountValue?: number
     maxDiscountValue?: number
+    emiAvailable?: boolean
+    leadTime?: string
+    outOfStock?: boolean
+    isActive?: boolean
     variants?: {
       uid: string
       name: string
@@ -31,6 +35,9 @@ export interface ProductUpdatedEvent {
       discountType?: string
       discountValue?: number
       maxDiscountValue?: number
+      leadTime?: string
+      outOfStock?: boolean
+      isActive?: boolean
     }[]
   }
 }
