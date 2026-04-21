@@ -56,6 +56,9 @@ export * from './events/product-created-event'
 export * from './events/product-updated-event'
 export * from './events/product-deleted-event'
 
+// Order Events
+export * from './events/history-created-event'
+
 // Notification Events
 export * from './events/notification-created-event'
 
