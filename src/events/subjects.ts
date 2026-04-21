@@ -44,17 +44,11 @@ export enum Subjects {
   ProductUpdated = 'product.updated',
   ProductDeleted = 'product.deleted',
 
-  // Shopping Cart
-  CartsSrv = 'carts',
-  CartCreated = 'cart.created',
-  CartUpdated = 'cart.updated',
-  CartDeleted = 'cart.deleted',
-
-  // Expiration
-  ExpirationsSrv = 'expirations',
-  ExpirationCreated = 'expiration.created',
-  ExpirationUpdated = 'expiration.updated',
-  ExpirationDeleted = 'expiration.deleted',
+  // Order
+  OrdersSrv = 'orders',
+  OrderCreated = 'order.created',
+  OrderUpdated = 'order.updated',
+  OrderDeleted = 'order.deleted',
 
   // Payment
   PaymentsSrv = 'payments',
@@ -62,9 +56,16 @@ export enum Subjects {
   PaymentUpdated = 'payment.updated',
   PaymentDeleted = 'payment.deleted',
 
+  // Expiration
+  ExpirationsSrv = 'expirations',
+  ExpirationCreated = 'expiration.created',
+  ExpirationUpdated = 'expiration.updated',
+  ExpirationDeleted = 'expiration.deleted',
+
+  // Review
+  ReviewsSrv = 'reviews',
+
   // Notification
   NotificationsSrv = 'notifications',
   NotificationCreated = 'notification.created',
-  // NotificationUpdated = 'notification.updated',
-  // NotificationDeleted = 'notification.deleted',
 }
