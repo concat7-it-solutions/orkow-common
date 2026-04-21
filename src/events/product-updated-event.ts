@@ -31,6 +31,6 @@ export interface ProductUpdatedEvent {
       discountType?: string
       discountValue?: number
       maxDiscountValue?: number
-    }
+    }[]
   }
 }

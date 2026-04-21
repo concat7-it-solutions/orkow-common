@@ -30,6 +30,6 @@ export interface ProductCreatedEvent {
       discountType?: string
       discountValue?: number
       maxDiscountValue?: number
-    }
+    }[]
   }
 }
