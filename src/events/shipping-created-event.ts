@@ -1,7 +1,7 @@
 import { Streams } from './streams'
 import { Subjects } from './subjects'
 
-export interface ShipppingCreatedEvent {
+export interface ShippingCreatedEvent {
   subjectRoot: Subjects.ShippingsSrv
   subject: Subjects.ShippingCreated
   streamName: Streams.ShippingsStream
