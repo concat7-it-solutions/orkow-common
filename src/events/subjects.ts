@@ -65,6 +65,9 @@ export enum Subjects {
 
   // Shipping
   ShippingsSrv = 'shippings',
+  ShippingCreated = 'shipping.created',
+  ShippingUpdated = 'shipping.updated',
+  ShippingDeleted = 'shipping.deleted',
 
   // Review
   ReviewsSrv = 'reviews',
