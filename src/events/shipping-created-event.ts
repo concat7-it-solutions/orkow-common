@@ -11,5 +11,6 @@ export interface ShipppingCreatedEvent {
     city?: string
     charge: number
     expressCharge: number
+    shopId: string
   }
 }
