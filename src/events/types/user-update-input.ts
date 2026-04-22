@@ -6,4 +6,5 @@ export type UpdateUserInput = {
   lastName?: string
   password?: string
   type?: UserType
+  isActive?: boolean
 }
