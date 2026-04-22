@@ -19,5 +19,6 @@ export interface CouponCreatedEvent {
     startDate: string
     endDate: string
     shopId?: string
+    customerIds?: string[]
   }
 }

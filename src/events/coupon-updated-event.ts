@@ -21,5 +21,6 @@ export interface CouponUpdatedEvent {
     startDate?: string
     endDate?: string
     shopId?: string
+    customerIds?: string[]
   }
 }
