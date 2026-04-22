@@ -7,6 +7,7 @@ export interface ProductCreatedEvent {
   streamName: Streams.ProductsStream
   data: {
     id: string
+    shopId: string
     name: string
     sku: string
     storePrice?: number

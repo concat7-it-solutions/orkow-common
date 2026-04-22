@@ -15,5 +15,6 @@ export interface CouponCreatedEvent {
     discountValue: number
     maxDiscountValue?: number
     minCartValue?: number
+    shopId?: string
   }
 }

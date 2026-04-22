@@ -17,5 +17,6 @@ export interface CouponUpdatedEvent {
     maxDiscountValue?: number
     minCartValue?: number
     isActive?: boolean
+    shopId?: string
   }
 }

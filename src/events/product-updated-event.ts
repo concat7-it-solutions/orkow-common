@@ -8,6 +8,7 @@ export interface ProductUpdatedEvent {
   data: {
     id: string
     version: number
+    shopId: string
     name?: string
     sku?: string
     storePrice?: number
