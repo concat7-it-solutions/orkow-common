@@ -63,6 +63,9 @@ export enum Subjects {
   ExpirationUpdated = 'expiration.updated',
   ExpirationDeleted = 'expiration.deleted',
 
+  // Shipping
+  ShippingsSrv = 'shippings',
+
   // Review
   ReviewsSrv = 'reviews',
 
