@@ -11,12 +11,15 @@ export interface CouponUpdatedEvent {
     id: string
     version: number
     coupon?: string
+    maxUsage?: number
     type?: CouponType
     discountType?: DiscountType
     discountValue?: number
     maxDiscountValue?: number
     minCartValue?: number
     isActive?: boolean
+    startDate?: string
+    endDate?: string
     shopId?: string
   }
 }

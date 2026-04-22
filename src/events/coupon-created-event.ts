@@ -10,11 +10,14 @@ export interface CouponCreatedEvent {
   data: {
     id: string
     coupon: string
+    maxUsage?: number
     type: CouponType
     discountType: DiscountType
     discountValue: number
     maxDiscountValue?: number
     minCartValue?: number
+    startDate: string
+    endDate: string
     shopId?: string
   }
 }
