@@ -61,6 +61,8 @@ export * from './events/history-created-event'
 
 // Shipping Events
 export * from './events/shipping-created-event'
+export * from './events/shipping-updated-event'
+export * from './events/shipping-deleted-event'
 
 // Notification Events
 export * from './events/notification-created-event'
