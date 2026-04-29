@@ -10,7 +10,7 @@ export interface OrderConfirmedEvent {
     version: number
     items: {
       uid: string
-      quantity: string
+      quantity: number
     }[]
   }
 }
