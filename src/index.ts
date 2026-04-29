@@ -17,6 +17,7 @@ export * from './events/streams'
 // @types
 export * from './events/types/coupon-type'
 export * from './events/types/discount-type'
+export * from './events/types/action-type'
 
 // User Events
 export * from './events/user-created-event'

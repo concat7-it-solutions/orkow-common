@@ -1,5 +1,6 @@
 import { Streams } from './streams'
 import { Subjects } from './subjects'
+import { ActionType } from './types/action-type'
 
 export interface HistoryCreatedEvent {
   subjectRoot: Subjects.OrdersSrv
@@ -7,7 +8,7 @@ export interface HistoryCreatedEvent {
   streamName: Streams.OrdersStream
   data: {
     title: string
-    action: string
+    action: ActionType
     userId: string
     url?: string
     json?: string
