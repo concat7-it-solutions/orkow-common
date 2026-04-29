@@ -58,8 +58,11 @@ export * from './events/product-updated-event'
 export * from './events/product-deleted-event'
 
 // Order Events
+export * from './events/order-created-event'
+export * from './events/order-updated-event'
 export * from './events/order-confirmed-event'
 export * from './events/order-canceled-event'
+export * from './events/order-returned-event'
 export * from './events/order-deleted-event'
 export * from './events/history-created-event'
 

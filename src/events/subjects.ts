@@ -50,6 +50,7 @@ export enum Subjects {
   OrderUpdated = 'order.updated',
   OrderConfirmed = 'order.confirmed',
   OrderCanceled = 'order.canceled',
+  OrderReturned = 'order.returned',
   OrderDeleted = 'order.deleted',
   HistoryCreated = 'history.created',
 
