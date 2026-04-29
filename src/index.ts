@@ -57,6 +57,8 @@ export * from './events/product-updated-event'
 export * from './events/product-deleted-event'
 
 // Order Events
+export * from './events/order-confirmed-event'
+export * from './events/order-deleted-event'
 export * from './events/history-created-event'
 
 // Shipping Events
