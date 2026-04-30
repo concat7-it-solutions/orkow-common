@@ -7,5 +7,9 @@ export interface OrderCreatedEvent {
   streamName: Streams.OrdersStream
   data: {
     id: string
+    currency: string
+    total: number
+    paymentStatus?: string
+    status?: string
   }
 }

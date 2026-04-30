@@ -8,5 +8,9 @@ export interface OrderUpdatedEvent {
   data: {
     id: string
     version: number
+    currency?: string
+    total?: number
+    paymentStatus?: string
+    status?: string
   }
 }
