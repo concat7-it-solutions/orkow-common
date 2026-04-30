@@ -22,6 +22,7 @@ export interface ProductCreatedEvent {
     emiAvailable?: boolean
     leadTime?: string
     variants?: {
+      id: string
       uid: string
       name: string
       price: number

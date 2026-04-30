@@ -24,6 +24,7 @@ export interface ProductUpdatedEvent {
     leadTime?: string
     isActive?: boolean
     variants?: {
+      id: string
       uid: string
       name: string
       price: number
