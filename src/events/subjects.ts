@@ -14,6 +14,12 @@ export enum Subjects {
   // Auth
   AuthSrv = 'auth',
 
+  // Profile
+  ProfileSrv = 'profile',
+  AddressCreated = 'address.created',
+  AddressUpdated = 'address.updated',
+  AddressDeleted = 'address.deleted',
+
   // Coupon
   CouponsSrv = 'coupons',
   CouponCreated = 'coupon.created',

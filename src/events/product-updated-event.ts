@@ -22,7 +22,6 @@ export interface ProductUpdatedEvent {
     maxDiscountValue?: number
     emiAvailable?: boolean
     leadTime?: string
-    outOfStock?: boolean
     isActive?: boolean
     variants?: {
       uid: string
@@ -37,8 +36,6 @@ export interface ProductUpdatedEvent {
       discountValue?: number
       maxDiscountValue?: number
       leadTime?: string
-      outOfStock?: boolean
-      isActive?: boolean
     }[]
   }
 }
