@@ -9,7 +9,6 @@ export interface PackageUpdatedEvent {
     id: string
     version: number
     backupCharge?: number
-    imageProcessingCharge?: number
     price: number
     vat: number
     isActive: boolean
