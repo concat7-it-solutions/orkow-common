@@ -8,6 +8,7 @@ export interface PackageCreatedEvent {
   data: {
     id: string
     backupCharge?: number
+    imageProcessingCharge?: number
     price: number
     vat: number
   }
