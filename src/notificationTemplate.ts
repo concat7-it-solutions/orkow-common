@@ -1,4 +1,4 @@
-export type TemplateUserParams = { fullname: string; imageUrl?: string }
+export type TemplateUserParams = { fullname: string; imageUrl?: string } // if imageUrl not a standard url then consider a userId
 
 export default function notificationTemplate(
   user: TemplateUserParams,
