@@ -7,4 +7,5 @@ export type UpdateUserInput = {
   password?: string
   type?: UserType
   isActive?: boolean
+  accessibleShops?: string[]
 }

@@ -8,4 +8,5 @@ export type CreateUserInput = {
   lastName: string
   password?: string
   type: UserType
+  accessibleShops?: string[]
 }
