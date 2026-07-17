@@ -35,11 +35,15 @@ function getText(type: string): string {
     case 'newShop':
       return 'has create a shop.'
     case 'verifying_in_process':
-      return 'your shop verifying process undergoing.'
+      return 'Your shop is in the verification process.'
     case 'verified':
       return 'your shop is ready for selling goods.'
     case 'active':
       return 'your shop has been activated.'
+    case 'suspended':
+      return 'your shop has been suspended.'
+    case 'rejected':
+      return 'your shop has been rejected.'
     case 'inactive':
       return 'your shop has been deactivated.'
     case 'newEnroll':
