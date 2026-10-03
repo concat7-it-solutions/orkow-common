@@ -11,6 +11,7 @@ export interface ProductUpdatedEvent {
     shopId: string
     name?: string
     sku?: string
+    categoryId?: string
     storePrice?: number
     price?: number
     vat?: number
