@@ -10,10 +10,7 @@ export type SellPaymentStatusTitle =
   | 'Awaiting Gateway'
   | 'Failed Gateway'
 export type SellStatusTitle =
-  | 'In process...'
-  | 'Completed'
-  | 'Cancelled'
-  | 'Rejected'
+  'In process...' | 'Completed' | 'Cancelled' | 'Rejected'
 export type BillingStatusTitle =
   | 'New'
   | 'Pending'

@@ -20,9 +20,11 @@ export interface ProductUpdatedEvent {
     discountType?: string
     discountValue?: number
     maxDiscountValue?: number
+    outOfStock?: boolean
     emiAvailable?: boolean
     leadTime?: string
     isActive?: boolean
+    isPublished?: boolean
     variants?: {
       id: string
       uid: string
