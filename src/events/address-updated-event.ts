@@ -13,6 +13,7 @@ export interface AddressUpdatedEvent {
     mobileNumber: string
     city: string
     address: string
+    addressLine2?: string
     division: string
     area?: string
     areaCode?: string
