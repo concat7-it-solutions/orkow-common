@@ -18,5 +18,6 @@ export interface AddressCreatedEvent {
     areaCode?: string
     country?: string
     zipCode?: string
+    customerId?: string
   }
 }
