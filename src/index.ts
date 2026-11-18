@@ -3,6 +3,7 @@ export * from './utils/getRequestId'
 export * from './utils/getUserId'
 export * from './utils/getUserType'
 export * from './utils/hashPassword'
+export * from './utils/orderUid'
 
 export * from './errors/custom-error'
 export * from './errors/bad-request-error'
