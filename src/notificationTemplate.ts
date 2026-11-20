@@ -19,49 +19,48 @@ export default function notificationTemplate(
 function getText(type: string): string {
   switch (type) {
     case 'newBusiness':
-      return 'has started a business.'
+      return 'has started a new business.'
     case 'updateBusiness':
-      return 'has updated the profile information.'
+      return 'has updated the business profile.'
     case 'newBilling':
-      return 'A bill has been generated for you.'
+      return 'A new bill has been generated for you.'
     case 'updateBilling':
-      return 'Billing status has been updated.'
+      return 'The billing status has been updated.'
     case 'newAgent':
-      return 'has become an agent.'
+      return 'has joined as an agent.'
     case 'updateAgent':
-      return 'has updated the profile information.'
+      return 'has updated the agent profile.'
     case 'newUser':
-      return 'has become a user.'
+      return 'has registered as a user.'
     case 'newShop':
-      return 'has create a shop.'
+      return 'has created a new shop.'
     case 'verifying_in_process':
-      return 'Your shop is in the verification process.'
+      return 'Your shop is currently under verification.'
     case 'verified':
-      return 'your shop is ready for selling goods.'
+      return 'Your shop is verified and ready for business.'
     case 'active':
-      return 'your shop has been activated.'
+      return 'Your shop has been activated.'
     case 'suspended':
-      return 'your shop has been suspended.'
+      return 'Your shop has been suspended.'
     case 'rejected':
-      return 'your shop has been rejected.'
+      return 'Your shop verification has been rejected.'
     case 'inactive':
-      return 'your shop has been deactivated.'
+      return 'Your shop has been deactivated.'
     case 'newEnroll':
-      return 'has enrolled.'
+      return 'has enrolled successfully.'
     case 'updateEnroll':
-      return 'has updated an enroll.'
+      return 'has updated the enrollment information.'
     case 'newOrder':
-      return 'has placed an order.'
+      return 'has placed a new order.'
     case 'newSell':
-      return 'has placed a sell order'
+      return 'has placed a new order.'
     case 'newPurchase':
-      return 'has purchased'
+      return 'has made a purchase.'
     case 'statusChange':
-      return 'status updated.'
+      return 'The status has been updated.'
     case 'newReview':
-      return 'has reviewed on your product.'
-
+      return 'has reviewed your product.'
     default:
-      return 'status updated.'
+      return 'The status has been updated.'
   }
 }
