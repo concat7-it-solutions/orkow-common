@@ -27,7 +27,7 @@ function getText(type: string): string {
     case 'updateBilling':
       return 'The billing status has been updated.'
     case 'newAgent':
-      return 'has joined as an agent.'
+      return 'has registered as an agent.'
     case 'updateAgent':
       return 'has updated the agent profile.'
     case 'newUser':
